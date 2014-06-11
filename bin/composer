@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BIN_PATH=$( dirname $( readlink -f $0 ) )
+
+php -d allow_url_fopen=On $BIN_PATH/composer.phar "$@"

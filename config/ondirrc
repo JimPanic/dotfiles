@@ -1,0 +1,14 @@
+enter ~/rise
+    export GIT_AUTHOR_NAME='Alexander Pánek'
+    export GIT_AUTHOR_EMAIL='alexander.panek@rise-world.com'
+    export GIT_COMMITTER_NAME='Alexander Pánek'
+    export GIT_COMMITTER_EMAIL='alexander.panek@rise-world.com'
+    echo '+++ RISE git settings active.'
+
+leave ~/rise
+    unset GIT_AUTHOR_NAME
+    unset GIT_AUTHOR_EMAIL
+    unset GIT_COMMITTER_NAME
+    unset GIT_COMMITTER_EMAIL
+    echo '+++ Global git settings restored.'
+

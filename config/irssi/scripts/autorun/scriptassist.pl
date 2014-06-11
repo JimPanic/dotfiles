@@ -1,0 +1,1 @@
+/home/apanek/.irssi/scripts/scriptassist.pl

@@ -1,0 +1,36 @@
+alias fail='tail -F'
+alias uncomment='sed "/^\s*$/d;/^\s*#/d"'
+alias nopaste="curl -F 'sprunge=<-' http://sprunge.us"
+alias p=projects
+alias g="GIT_SSL_NO_VERIFY=1 git"
+alias screen="screen -U"
+alias less="less -r"
+alias attach="byobu attach-session -t"
+alias mv="mv -i"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export TZ="Europe/Vienna"
+
+export PATH=${HOME}/.bin:${HOME}/bin:${PATH}:/opt/bw/bin:/opt/dev/bin:/opt/nodejs/bin:/opt/node/bin:/opt/php/bin:/opt/ruby/bin
+keychain ~/.ssh/id_rsa ~/.ssh/bw.id_rsa
+. ~/.keychain/$(hostname)-sh
+
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+if command_exists ondir
+then
+    ondir=$(dirname $(readlink $0))/ondir.zsh
+
+    if [ -f $ondir ]
+    then
+        source $ondir
+
+        # Leave the directory and enter it again to make sure the Git author
+        # settings are ACTUALLY in place.
+        cd; cd -
+    fi
+fi

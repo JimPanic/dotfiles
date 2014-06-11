@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/apanek/private/rust/src/libstd'
+let g:netrw_dirhist_2='/home/apanek/private/rust/src/libstd/num'
+let g:netrw_dirhist_3='/home/apanek/private/rust/src/libstd'
+let g:netrw_dirhist_4='/home/apanek/private/rust/src/libstd/sync'
+let g:netrw_dirhist_5='/home/apanek/private/rust/src/libstd'
+let g:netrw_dirhist_6='/home/apanek/private/rust/src/libstd/unstable'
+let g:netrw_dirhist_7='/home/apanek/private/rust/src/libstd'
+let g:netrw_dirhist_8='/home/apanek/private/rust/src'
+let g:netrw_dirhist_9='/home/apanek/private/rust/src/libcore'

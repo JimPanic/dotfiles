@@ -1,0 +1,6 @@
+#!/bin/sh
+
+apt-get install \
+	git	\
+	tig \
+	screen

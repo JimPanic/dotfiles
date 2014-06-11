@@ -1,0 +1,30 @@
+set number
+set ts=4
+set sw=4
+set guioptions=-mT
+set expandtab
+
+colorscheme delek
+
+map <F5> :tabfirst<CR><CR>
+map <F6> :tabprevious<CR><CR>
+map <F7> :tabnext<CR><CR>
+map <F8> :tablast<CR><CR>
+
+let g:Tex_DefaultTargetFormat = 'pdf'
+
+au BufRead,BufNewFile  *.php set ts=4
+au BufRead,BufNewFile  *.php set sw=4
+au BufRead,BufNewFile  *.php set noexpandtab
+au BufRead,BufNewFile  Vagrantfile,*.coffee,*.html,*.css,*.rb,*.gemspec,*.tpl,*.pp,*.ls,*.js set ts=2
+au BufRead,BufNewFile  Vagrantfile,*.coffee,*.html,*.css,*.rb,*.gemspec,*.tpl,*.pp,*.ls,*.js set sw=2
+au BufRead,BufNewFile  Vagrantfile,*.coffee,*.pp,*.cc,*.c,*.h,*.html,*.css,*.rb,*.gemspec,*.tpl,*.ls set expandtab
+au BufRead,BufNewFile  *.cc,*.c,*.h set ts=4
+au BufRead,BufNewFile  *.cc,*.c,*.h set sw=4
+au BufRead,BufNewFile  *.tpl set filetype=html.twig
+au BufRead,BufNewFile  *.md set filetype=markdown
+au BufRead,BufNewFile  Makefile set ts=2
+
+" Load all ~/.vim/bundles 
+execute pathogen#infect()
+call pathogen#incubate()
